@@ -1,10 +1,15 @@
-import { useEffect } from 'react'
-
+import * as React from 'react'
 import { getHash } from './getHash'
-import t from 'prop-types'
+export interface SpotifyAuthListenerProps {
+  noCookie: boolean
+  localStorage: boolean
+  onAccessToken: (token: string) => void
+}
 
-const SpotifyAuthListener = (props) => {
-  useEffect(() => {
+const SpotifyAuthListener: React.FC<SpotifyAuthListenerProps> = (
+  props: SpotifyAuthListenerProps
+) => {
+  React.useEffect(() => {
     const accessToken = getHash().access_token
 
     if (accessToken) {
@@ -21,16 +26,5 @@ const SpotifyAuthListener = (props) => {
   return null
 }
 
-SpotifyAuthListener.propTypes = {
-  noCookie: t.bool,
-  localStorage: t.bool,
-  onAccessToken: t.func
-}
 
-SpotifyAuthListener.defaultProps = {
-  noCookie: false,
-  localStorage: false,
-  onAccessToken: (token) => {}
-}
-
-export default SpotifyAuthListener
+export default SpotifyAuthListener;

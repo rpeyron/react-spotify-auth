@@ -1,7 +1,7 @@
 /**
  * List of all Spotify Scopes
  */
-const scopes = {
+let basicScopes = {
   // images
   ugcImageUpload: 'ugc-image-upload',
 
@@ -35,15 +35,22 @@ const scopes = {
 
   // users
   userReadEmail: 'user-read-email',
-  userReadPrivate: 'user-read-private'
+  userReadPrivate: 'user-read-private',
+
+  // Custom created
+  all: '',
 }
 
-export const allScopes = (() => {
-  return Object.keys(scopes)
+const allScopes = (() => {
+  return Object.keys(basicScopes)
     .reduce((sum, scope) => {
-      return sum.concat(scopes[scope], '%20')
+      return sum.concat(basicScopes[scope], '%20')
     }, '')
     .slice(0, -3)
 })()
+
+basicScopes.all = allScopes
+
+const scopes = { ...basicScopes }
 
 export default scopes

@@ -1,23 +1,10 @@
-h1 {
-  padding: 0.5rem 1rem;
-}
-
 body {
   margin: 0;
-}
-
-.login-page {
-  text-align: center;
-}
-
-.spotifyBtn {
-  margin: 0 auto;
-  display: block;
-  margin: auto;
-  text-align: center;
-  text-align: center;
-  display: inline-block;
-  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 code {

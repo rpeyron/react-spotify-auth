@@ -1,4 +1,9 @@
-const getRedirectUrl = (clientID, scopes, redirectUri, showDialog) => {
+const getRedirectUrl = (
+  clientID: string,
+  scopes: string[],
+  redirectUri: string,
+  showDialog: boolean
+) => {
   return (
     'https://accounts.spotify.com/authorize?response_type=token' +
     `&client_id=${clientID}` +

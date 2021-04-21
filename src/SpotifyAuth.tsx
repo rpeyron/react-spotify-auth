@@ -6,16 +6,16 @@ import React, { Component } from 'react'
 import scopes from './Scopes'
 import getRedirectUri from './generateUrl'
 
-import styles from './SpotifyAuth.css'
 import t from 'prop-types'
 import SpotifyLogo from './SpotifyLogo'
 import { getHash } from './getHash'
+import * as styles from './SpotifyAuth.module.css'
 
 class SpotifyAuth extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      isAuthenticatedWithSpotify: false
+      isAuthenticatedWithSpotify: false,
     }
   }
 
@@ -69,7 +69,7 @@ SpotifyAuth.propTypes = {
   noLogo: t.bool,
   noCookie: t.bool,
   showDialog: t.bool,
-  localStorage: t.bool
+  localStorage: t.bool,
 }
 
 SpotifyAuth.defaultProps = {

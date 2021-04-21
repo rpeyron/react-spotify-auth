@@ -10,6 +10,11 @@ dist
 .rpt2_cache
 .docz
 
+
+# Example
+/example/node_modules
+/example/build
+
 # misc
 .DS_Store
 .env

@@ -1,4 +1,4 @@
-export const getHash = () => {
+export const getHash = (): any => {
   return window
     ? window.parent.location.hash
         .substring(1)

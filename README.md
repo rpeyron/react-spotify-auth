@@ -77,19 +77,19 @@ export default App
 
 Here's some props that can be used to customize the button. Please enter your own values for `redirectUri` and `clientID`, otherwise your project may not work correctly.
 
-| Name            | Required | Default                                    | Description                                                                                                                                                                           |
-| --------------- | :------: | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `redirectUri`   |    ✅    | `http://localhost:3000`                    | Spotify redirect URI. In most cases, this is the URL of your webpage. _It must be set in your Developer Console_.                                                                     |
-| `clientID`      |    ✅    |                                            | Spotify app Client ID. Can be found from the Spotify Developer Console.                                                                                                               |
-| `scopes`        |          | `['user-read-private', 'user-read-email']` | _Array_ of camelCased equivalent for the scopes you are requesting. For example, if you wanted the scope `user-read-recently-played` you can enter `[Scopes.userReadRecentlyPlayed]`. |
-| `onAccessToken` |          | `(token) => {}`                            | Function that gets triggered when the component recognizes an access token after an auth grant. Is called with the parameter `accessToken`.                                           |
-| `title`         |          | "Continue with Spotify"                    | Message inside the button.                                                                                                                                                            |
-| `btnClassName`  |          | style included in package                  | Class(es) that is given to the button.                                                                                                                                                |
-| `logoClassName` |          | style included in package                  | Class(es) given to the svg that draws the Spotify logo. _Make sure to add a width if you use a custom class, otherwise it will not appear._                                           |
-| `noLogo`        |          | `false`                                    | Removes the Spotify logo from the button.                                                                                                                                             |
-| `localStorage`  |          | `false`                                    | Uses `window.localStorage` as a method to store the token. Note that localstorage does not have an expiry.                                                                            |
-| `noCookie`      |          | `false`                                    | When true, it does not store the auth token in a cookie named `SpotifyAuthToken`                                                                                                      |
-| `showDialog`      |          | `false`                                  | Whether or not to force the user to approve the app again if they’ve already done so. If false (default), a user who has already approved the application may be automatically redirected to the URI specified by redirect_uri. If true, the user will not be automatically redirected and will have to approve the app again.                                                                                                      |
+| Name            | Required | Default                                    | Description                                                                                                                                                                                                                                                                                                                    |
+| --------------- | :------: | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `redirectUri`   |    ✅    | `http://localhost:3000`                    | Spotify redirect URI. In most cases, this is the URL of your webpage. _It must be set in your Developer Console_.                                                                                                                                                                                                              |
+| `clientID`      |    ✅    |                                            | Spotify app Client ID. Can be found from the Spotify Developer Console.                                                                                                                                                                                                                                                        |
+| `scopes`        |          | `['user-read-private', 'user-read-email']` | _Array_ of camelCased equivalent for the scopes you are requesting. For example, if you wanted the scope `user-read-recently-played` you can enter `[Scopes.userReadRecentlyPlayed]`.                                                                                                                                          |
+| `onAccessToken` |          | `(token) => {}`                            | Function that gets triggered when the component recognizes an access token after an auth grant. Is called with the parameter `accessToken`.                                                                                                                                                                                    |
+| `title`         |          | "Continue with Spotify"                    | Message inside the button.                                                                                                                                                                                                                                                                                                     |
+| `btnClassName`  |          | style included in package                  | Class(es) that is given to the button.                                                                                                                                                                                                                                                                                         |
+| `logoClassName` |          | style included in package                  | Class(es) given to the svg that draws the Spotify logo. _Make sure to add a width if you use a custom class, otherwise it will not appear._                                                                                                                                                                                    |
+| `noLogo`        |          | `false`                                    | Removes the Spotify logo from the button.                                                                                                                                                                                                                                                                                      |
+| `localStorage`  |          | `false`                                    | Uses `window.localStorage` as a method to store the token. Note that localstorage does not have an expiry.                                                                                                                                                                                                                     |
+| `noCookie`      |          | `false`                                    | When true, it does not store the auth token in a cookie named `SpotifyAuthToken`                                                                                                                                                                                                                                               |
+| `showDialog`    |          | `false`                                    | Whether or not to force the user to approve the app again if they’ve already done so. If false (default), a user who has already approved the application may be automatically redirected to the URI specified by redirect_uri. If true, the user will not be automatically redirected and will have to approve the app again. |
 
 ### SpotifyAuthListener
 
@@ -129,17 +129,17 @@ If you prefer working with the [localStorage API](https://developer.mozilla.org/
 
 ## Changelog
 
-
 1.3.1
 
- - Add show dialogue parameter to url
+- Add show dialogue parameter to url
 
 1.2.1
 
 - Move to React 17
 
-1.1.0 - 1.1.4
- - Dependency upgrades
+  1.1.0 - 1.1.4
+
+- Dependency upgrades
 
 1.1.0
 
